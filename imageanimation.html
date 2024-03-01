@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image animation</title>
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .box{
+        position: relative;
+        height: 300px;
+        width: 300px;
+        transform-style: preserve-3d;
+        animation: imanim 3s linear 5;
+    }
+    @keyframes imanim{
+        0%{
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100%{
+            transform: perspective(1000px) rotateY(360deg);
+        }
+    }
+
+    span{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transform-origin: 0px;
+        transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);
+        -webkit-box-reflect: below 0px linear-gradient(transparent,#0004);
+
+        
+    }
+    .box span img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span style="--i:1"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:2"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:3"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:4"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:5"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:6"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:7"><img src="./fashion/shirt1.jpeg" alt=""></span>
+        <span style="--i:8"><img src="./fashion/shirt1.jpeg" alt=""></span>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Hover</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        nav{
+        
+            background-color: aquamarine;
+        }
+        nav ul{
+            position: relative;
+            font-size: 1.4rem;
+        }
+        nav li{
+            display: inline-block;
+        }
+        nav li:hover{
+            color: #fff;
+            background: #444;
+        }
+        @supports selectors(:focus-visible){
+        nav li a:focus-visible {
+            transform: scale(1.5);
+            outline-offset: 0.5rem;
+        }
+        }
+
+        nav a{
+            display: inline-block;
+            text-decoration: none;
+            padding: 1em 3em;
+            list-style: none;
+        }
+         nav a:hover{
+            color: white;
+         }
+        .menu {
+            position: absolute;
+            display: none;
+            background: #444;
+        }
+        .menu a{
+            color: white;
+        }
+        .menu h3{
+            margin-top: 1em;
+        }
+        .menu li{
+            display: block;
+            width: 100vw;
+        margin-left: 0px;
+        margin-top: 1em;
+        }
+        nav li:hover .menu{
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Tab1</a>
+            <div class="menu">
+                <h3>Control</h3>
+                <ul>
+                <li><a href="#">link item1</a></li>
+                <li><a href="#">link item2</a></li>
+                <li><a href="#">link item3</a></li>
+                <li><a href="#">link item4</a></li>
+                </ul>
+                
+            </div>
+            </li>
+            <li><a href="#">Tab2</a></li>
+            <li><a href="#">Tab3</a></li>
+            <li><a href="#">Tab4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

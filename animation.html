@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b{
+            width: 700px;
+            height: 700px;
+            background-color: aqua;
+            position: relative;
+        }
+        .s{ 
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            animation: small 3s ease-in-out 1 forwards;
+            position: relative;
+        }
+        .s::before{
+            content: '';
+            position: absolute;
+            left: 0px;
+            border: 15px solid transparent;
+            border-left-color: rgb(183, 17, 36);
+        }
+
+        @keyframes small {
+            from{border-radius:0%;
+            background-color: orange;
+        color: aqua;}
+            to{border-radius:50%;
+           background-color: orangered;
+        color: aquamarine;}
+        }
+        /* .b:hover .s{ */
+            /* transform: translateX(100%);
+            animation: left-to-right 5s ease-in;
+        }
+        @keyframes left-to-right {
+            0%{
+                transform: translateX(0%);
+            }
+            100%{
+                transform: translateY(100%);
+            } */
+        /* } */
+    </style>
+</head>
+<body>
+    <div class="b">
+    <div class="s">SPAM</div>
+    </div>
+</body>
+</html>

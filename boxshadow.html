@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <style>
+        :root{
+            --gradient: linear-gradient(
+                45deg,
+                #ff6f91,
+                #845ec2,
+                #f9f871
+            )
+        }
+        .s{
+            padding-block: min(20vh, 10rem);
+        }
+        .s{
+            background-color: aqua;
+            padding: 3rem 2rem;
+            font-size: 2rem;
+            width: 440px;
+            margin: 2rem  auto;
+            box-shadow: -10px 10px 5px 2px rgba(255, 127, 80, 0.737);
+            border-top-left-radius: 1em 3em;
+            border-bottom-right-radius: 2em;
+
+        }
+        .s:hover{
+            box-shadow:inset -2px 2px 3px 1px currentColor;
+        }
+        .s span{
+            box-shadow: 3px 3px 2px 1px ;
+        }
+        .s span:hover{
+            box-shadow: inset 1px 1px 3px 1px currentColor;
+            background-image: var(--gradient);
+            background-clip: text;
+            color: transparent;
+        }
+                
+
+    </style>
+</head>
+<body>
+    <div class="s">
+        This is for <span> box shadow</span>
+    </div>
+    
+</body>
+</html>

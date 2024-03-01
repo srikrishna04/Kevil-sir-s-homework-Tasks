@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Reflection</title>
+    <style>
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            padding: 40px;
+            bottom: 60;
+            transform: scale(0.6);
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            border-radius: 2em;
+            width: 100%;
+            height: 450px;
+            padding: 10px;
+            margin: 25px;
+        }
+        .card .img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* position: absolute; */
+        }
+        span,h1{
+            color: black;
+            font-family: sans-serif;
+            position: relative;
+            top: 20px;
+        }
+        .card:hover{
+            transform: scale(1.2);
+            -webkit-box-reflect: below 3px linear-gradient(transparent,#0004);
+        }
+        .card:hover span{
+            visibility: visible;
+        }
+        .card1:hover{
+            box-shadow: 0 0 3px blue,
+            0 0 10px blue,
+            0 0 30px blue,
+            0 0 200px blue;
+            border: 5px solid blue;
+        }
+        .card1:hover .img1{
+            border: 10px solid blue;
+        } 
+        .card2:hover{
+            box-shadow: 0 0 3px yellow,
+            0 0 10px yellow,
+            0 0 30px yellow,
+            0 0 200px yellow;
+            border: 5px solid yellow;
+        }
+        .card2:hover .img2{
+            border: 10px solid yellow;
+        } 
+        .card3:hover{
+            box-shadow: 0 0 3px green,
+            0 0 10px green,
+            0 0 30px green,
+            0 0 200px green;
+            border: 5px solid green;
+        }
+        .card3:hover .img3{
+            border: 10px solid green;
+        } 
+        h1{
+            text-shadow: 0 0 3px black;
+        }
+        span{
+            visibility: hidden;
+            
+            z-index: -2;
+            font-weight: bold;
+        }
+        .card:hover span{
+            top:20px
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card card1">
+            <img class="img img1" src="./fashion/shirt1.jpeg" alt="">
+            <h1>card one</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt id asperiores sapiente porro laudantium molestiae dolores, distinctio similique corrupti natus?</span>
+        </div>
+        <div class="card card2">
+            <img class="img img2"src="./fashion/shirt1.jpeg" alt="">
+            <h1>card two</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt id asperiores sapiente porro laudantium molestiae dolores, distinctio similique corrupti natus?</span>
+        </div>
+        <div class="card card3">
+            <img class="img img3"src="./fashion/shirt1.jpeg" alt="">
+            <h1>card three</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt id asperiores sapiente porro laudantium molestiae dolores, distinctio similique corrupti natus?</span>
+        </div>
+    </div>
+    
+</body>
+</html>
